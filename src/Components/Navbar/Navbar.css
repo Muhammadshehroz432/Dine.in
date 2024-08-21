@@ -114,31 +114,32 @@
 /* Tablets screen */
 @media only screen and (min-width: 700px) and (max-width: 912px) {
   .navbar {
-    background-color: var(--web-color) !important;
+    background-color: black !important;
     padding: 0px 16px !important;
   }
   .book-table {
     margin-bottom: 1rem;
   }
   .navbar-brand {
-    color: black !important;
+    color: var(--web-color) !important;
   }
-  .active {
-    color: black !important;
-  }
+
   .nav-link {
     color: white !important;
   }
   .nav-link:hover {
-    color: black !important;
+    color: var(--web-color) !important;
   }
   .book-table {
-    background-color: black !important;
+    background-color: var(--web-color) !important;
   }
   .book-table:hover {
     background-color: transparent !important;
-    border: 2px solid black !important;
-    color: black !important;
+    border: 2px solid var(--web-color) !important;
+    color: var(--web-color) !important;
+  }
+  .active {
+    color: var(--web-color) !important; /* Ensure consistency */
   }
 }
 .book-table a {
