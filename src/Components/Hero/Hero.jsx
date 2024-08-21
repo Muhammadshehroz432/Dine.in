@@ -24,7 +24,7 @@ const Hero = () => {
       >
         <div className="carousel-inner">
           {/* Carousel Item 1 */}
-          <div className="carousel-item active" data-bs-interval="1500">
+          <div className="carousel-item active" data-bs-interval="1300">
             <div className="gradient-overlay"></div>
             <img
               src={Banner_img1}
@@ -32,15 +32,12 @@ const Hero = () => {
               alt="Banner"
             />
             <div className="carousel-caption lh-1 z-3 position-absolute top-50 start-50 translate-middle">
-              <div className="animated-caption" data-aos="fade-up">
-                <h1 className="banner-heading mb-0">DINE.IN</h1>
-                <p className="fs-1 banner-para">"Savor Every Moment"</p>
-              </div>
+              <h1 className="banner-head mb-0">DINE.IN</h1>
+              <p className="fs-2 banner-para">"Savour your Moment"</p>
             </div>
           </div>
-
           {/* Carousel Item 2 */}
-          <div className="carousel-item" data-bs-interval="1500">
+          <div className="carousel-item" data-bs-interval="1300">
             <div className="gradient-overlay"></div>
             <img
               src={Banner_img2}
@@ -48,13 +45,13 @@ const Hero = () => {
               alt="Banner"
             />
             <div className="carousel-caption lh-1 z-3 position-absolute top-50 start-50 translate-middle">
-              <h1 className="banner-heading mb-0">DINE.IN</h1>
-              <p className="fs-1 banner-para">"Taste the Difference"</p>
+              <h1 className="banner-head mb-0">DINE.IN</h1>
+              <p className="fs-2 banner-para">"Taste the Difference"</p>
             </div>
           </div>
 
           {/* Carousel Item 3 */}
-          <div className="carousel-item" data-bs-interval="1500">
+          <div className="carousel-item" data-bs-interval="1300">
             <div className="gradient-overlay"></div>
             <img
               src={Banner_img3}
@@ -62,14 +59,14 @@ const Hero = () => {
               alt="Banner"
             />
             <div className="carousel-caption lh-1 z-3 position-absolute top-50 start-50 translate-middle">
-              <h1 className="banner-heading mb-0">DINE.IN</h1>
-              <p className="fs-1 banner-para">"Where Flavor Meets Tradition"</p>
+              <h1 className="banner-head mb-0 ">DINE.IN</h1>
+              <p className="fs-2 banner-para">"Where Flavor Meets Tradition"</p>
             </div>
           </div>
         </div>
 
         {/* Carousel Controls */}
-        <button
+        {/* <button
           className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleFade"
@@ -92,7 +89,7 @@ const Hero = () => {
             aria-hidden="true"
           ></span>
           <span className="visually-hidden">Next</span>
-        </button>
+        </button> */}
       </div>
 
       {/* Menu Section */}

@@ -37,11 +37,11 @@
   width: 100%;
 }
 
-.banner-heading {
+.banner-head {
   font-family: "logofont";
   color: var(--web-color);
   font-weight: 800;
-  font-size: 5rem; /* Adjusted for better mobile display */
+  font-size: 9rem; /* Adjusted for better mobile display */
 }
 
 .banner-para {
@@ -69,7 +69,7 @@
 
 /* Mobile screens */
 @media only screen and (max-width: 600px) {
-  .banner-heading {
+  .banner-head {
     font-size: 3rem !important; /* Responsive heading size */
   }
 
@@ -82,7 +82,7 @@
   }
 
   .banner-menu-img {
-    width: 80%; /* Responsive menu image width */
+    width: 48%; /* Responsive menu image width */
   }
 }
 
