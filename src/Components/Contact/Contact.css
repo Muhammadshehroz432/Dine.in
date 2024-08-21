@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "logofont";
+  src: url(Cinzel-Bold.ttf) format("truetype");
+}
+
+:root {
+  --web-color: #c8a97e;
+}
+
+.contact-banner-wrapper {
+  position: relative;
+}
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 2)
+  ); /* Example gradient */
+  z-index: 1;
+  pointer-events: none; /* Allows clicks to pass through to the image */
+}
+.contact-banner-wrapper img {
+  width: 100%;
+  height: 28rem;
+  display: block;
+  z-index: 0;
+  object-fit: cover;
+}
+.menu-head1 {
+  font-family: "logofont";
+  font-weight: 900;
+  color: var(--web-color);
+}
+
+.form-input {
+  width: 92%;
+  height: 7vh;
+}
+
+.form-input:focus {
+  border: 1px solid black;
+  outline: none;
+}
+.form-control:focus {
+  border: 1px solid black !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.contact-btn {
+  background-color: var(--web-color) !important;
+  border: none !important;
+}
+.contact-input {
+  width: 60%;
+  height: 6vh;
+}
+.contact-input:focus {
+  outline: none;
+}
+textarea {
+  width: 60%;
+}
+
+.sumbit-btn {
+  background-color: var(--web-color);
+  height: 5vh;
+  width: 30%;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+/* for Mobile screen */
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .sumbit-btn {
+    width: 45%;
+  }
+  .contact-input {
+    width: 70%;
+  }
+}

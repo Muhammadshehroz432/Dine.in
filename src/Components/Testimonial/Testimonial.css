@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "logofont";
+  src: url(Cinzel-Bold.ttf) format("truetype");
+}
+
+:root {
+  --web-color: #c8a97e;
+}
+
+.testimonial-heading h1 {
+  font-family: "logofont";
+  color: var(--web-color);
+  font-weight: bolder;
+}
+
+.review-content img {
+  width: 11%;
+  height: 20vh;
+  border-radius: 80%;
+}
+
+/* Mobile devices (up to 600px) */
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .review-content img {
+    width: 29%;
+    height: 13vh;
+    border-radius: 80%;
+  }
+}
+
+/* Tablets (600px to 900px) */
+@media only screen and (min-width: 700px) and (max-width: 912px) {
+  .review-content img {
+    width: 25%;
+    height: 13vh;
+    border-radius: 80%;
+  }
+}
+/* Laptops (1000px to 1200px) */
+@media only screen and (min-width: 1000px) and (max-width: 1024px) {
+  .review-content img {
+    width: 29%;
+    height: 13vh;
+    border-radius: 80%;
+  }
+}

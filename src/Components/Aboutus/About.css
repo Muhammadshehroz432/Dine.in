@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "logofont";
+  src: url(Cinzel-Bold.ttf) format("truetype");
+}
+
+:root {
+  --web-color: #c8a97e;
+}
+
+.about-imgs {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.about-img {
+  width: 49%;
+  height: 68vh;
+  object-fit: cover;
+}
+.about-text {
+  order: 1;
+}
+
+.about-text h1 {
+  font-family: "logofont";
+  color: #c8a97e;
+  font-weight: bolder;
+}
+.about-text h2 {
+  font-weight: bolder;
+}
+.about-day span {
+  color: #c8a97e;
+}
+.about-number {
+  color: #c8a97e;
+}
