@@ -8,7 +8,8 @@ import Testimonial from "./Components/Testimonial/Testimonial";
 import Contact from "./Components/Contact/Contact";
 import Booktable from "./Components/Book-table/Booktable";
 import Blog from "./Components/Blogs/Blog";
-import Specialities from "./Components/Specialities/Specialities";
+import Menu from "./Components/Menu/Menu";
+
 const App = () => {
   return (
     <div>
@@ -17,7 +18,7 @@ const App = () => {
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/catering" element={<Catering />} />
-        <Route path="/specialities" element={<Specialities />} />
+        <Route path="/menu" element={<Menu />} />
         <Route path="/testimonial" element={<Testimonial />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/booktable" element={<Booktable />} />

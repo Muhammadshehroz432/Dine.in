@@ -65,18 +65,28 @@
 .active {
   color: var(--web-color) !important; /* Ensure consistency */
 }
-.book-table {
-  background-color: var(--web-color) !important;
-  border: none !important;
-}
-.book-table:hover {
-  background-color: transparent !important;
-  border: 1px solid var(--web-color) !important;
-  color: var(--web-color) !important;
-}
 
 .black-nav {
   color: black !important;
+}
+.add-to-cart {
+  color: var(--web-color);
+}
+.book-btn {
+  background-color: var(--web-color);
+  color: white;
+  padding: 9px;
+  border: none;
+  transition: all ease-in-out 0.2s;
+  border-radius: 10px;
+}
+.book-btn:hover {
+  background-color: transparent;
+  border: 2px solid var(--web-color);
+  color: var(--web-color);
+}
+.add-to-cart {
+  color: var(--web-color) !important;
 }
 
 /* for Mobile screen */
@@ -99,16 +109,13 @@
   .nav-link:hover {
     color: var(--web-color) !important;
   }
-  .book-table {
-    background-color: var(--web-color) !important;
-  }
-  .book-table:hover {
-    background-color: transparent !important;
-    border: 2px solid var(--web-color) !important;
-    color: var(--web-color) !important;
-  }
+
   .active {
     color: var(--web-color) !important; /* Ensure consistency */
+  }
+  .cart-badge {
+    position: relative;
+    left: -11%;
   }
 }
 /* Tablets screen */
@@ -131,15 +138,19 @@
     color: var(--web-color) !important;
   }
   .book-table {
-    background-color: var(--web-color) !important;
+    background-color: var(--web-color);
   }
   .book-table:hover {
     background-color: transparent !important;
     border: 2px solid var(--web-color) !important;
-    color: var(--web-color) !important;
+    color: white !important;
   }
   .active {
     color: var(--web-color) !important; /* Ensure consistency */
+  }
+  .cart-badge {
+    position: relative;
+    left: -6%;
   }
 }
 .book-table a {

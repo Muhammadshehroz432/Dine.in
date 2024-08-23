@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
-
+import { FaShoppingCart } from "react-icons/fa";
 const Navbar = () => {
   const [Sticky, setSticky] = useState(false);
 
@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className="container">
           <a className="navbar-brand fs-2">DINE.IN</a>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler order-2"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -29,11 +29,15 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="fs-2 fw-bold toggler-icon ">
+            <span className="fs-2 fw-bold toggler-icon">
               <GiHamburgerMenu />
             </span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <div
+            className="collapse navbar-collapse order-lg-1 order-3"
+            id="navbarSupportedContent"
+          >
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
               <li className="nav-item">
                 <NavLink to="/" className={`nav-link`}>
@@ -62,7 +66,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/specialities"
+                  to="/menu"
                   className={` nav-link ${(e) => {
                     return e.isActive ? "active " : "";
                   }} `}
@@ -100,19 +104,10 @@ const Navbar = () => {
                   Contact
                 </NavLink>
               </li>
-            </ul>
-
-            <center>
               <NavLink to="/booktable">
-                {" "}
-                <button
-                  type="button"
-                  class="btn btn-primary ms-lg-5 book-table"
-                >
-                  Book a Table
-                </button>
+                <button className="book-btn">Book a table</button>
               </NavLink>
-            </center>
+            </ul>
           </div>
         </div>
       </nav>

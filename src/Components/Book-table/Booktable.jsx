@@ -112,7 +112,7 @@ const Booktable = () => {
             </div>
             <button
               type="sumbit"
-              class="btn btn-primary book-table-btn mt-4 fs-4"
+              class="btn btn-primary sumbit-book-table  mt-4 fs-4"
             >
               make a Reservation
             </button>

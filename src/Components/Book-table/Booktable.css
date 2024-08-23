@@ -49,14 +49,16 @@ select:focus {
   border: none;
   outline: none;
 }
-.book-table-btn {
+.sumbit-book-table {
   background-color: var(--web-color) !important;
   border: none !important;
+  transition: all ease-in-out 0.3s;
 }
-.book-table-btn:hover {
-  background-color: transparent !important;
-  border: 1px solid var(--web-color) !important;
+
+.sumbit-book-table:hover {
+  background: transparent !important;
   color: var(--web-color) !important;
+  border: 2px solid var(--web-color) !important;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 912px) {

@@ -32,8 +32,22 @@ const Hero = () => {
               alt="Banner"
             />
             <div className="carousel-caption lh-1 z-3 position-absolute top-50 start-50 translate-middle">
-              <h1 className="banner-head mb-0">DINE.IN</h1>
-              <p className="fs-2 banner-para">"Savour your Moment"</p>
+              <h1
+                className="banner-head mb-0"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-offset="100"
+              >
+                DINE.IN
+              </h1>
+              <p
+                className="fs-2 banner-para"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-offset="100"
+              >
+                "Savour your Moment"
+              </p>
             </div>
           </div>
           {/* Carousel Item 2 */}

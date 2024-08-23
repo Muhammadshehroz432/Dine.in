@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "logofont";
+  src: url(Cinzel-Bold.ttf) format("truetype");
+}
+
+:root {
+  --web-color: #c8a97e;
+}
+.special-heading h1 {
+  font-family: "logofont";
+  color: var(--web-color);
+}
+
+.menu-categories p {
+  font-family: "logofont";
+  background-color: transparent;
+  color: var(--web-color);
+  border-radius: 10px;
+  transition: all ease-in-out 0.2s;
+}
+.menu-categories p:hover {
+  background-color: var(--web-color);
+  color: white;
+}
+
+.menu-img {
+  width: 43%;
+  object-fit: cover;
+}
+.menu-btn {
+  background-color: var(--web-color);
+  width: 60%;
+  padding: 5px;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  transition: all ease-in-out 0.3s;
+}
+.menu-btn:hover {
+  background-color: transparent;
+  color: var(--web-color);
+  border: 2px solid var(--web-color);
+}
+.Price {
+  color: var(--web-color);
+}
+
+.breakfast-heading {
+  font-family: "logofont";
+  color: var(--web-color);
+}
+.Lunch-heading {
+  font-family: "logofont";
+  color: var(--web-color);
+}
+
+.menu-active {
+  background-color: var(--web-color) !important;
+  color: white !important;
+}
+
+.hide-menu {
+  display: none !important;
+}
