@@ -282,7 +282,7 @@ export const MenuItems = [
   },
   {
     id: "024",
-    image: "/desert-6.jpg",
+    image: "/Desert-6.jpg",
     name: "Mango Passion Parfait",
     description:
       "Layers of fresh mango puree, passion fruit coulis, and creamy yogurt, topped with crunchy granola and mint leaves",
