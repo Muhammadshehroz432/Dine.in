@@ -62,3 +62,11 @@
 .hide-menu {
   display: none !important;
 }
+
+/* for Mobile screen */
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .menu-categories p:hover {
+    background-color: transparent; /* or the original background color */
+    color: var(--web-color); /* or the original text color */
+  }
+}
