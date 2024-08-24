@@ -27,7 +27,7 @@ const Navbar = () => {
             <span className="fs-2 position-relative">
               <FaShoppingCart />
               <span className="badge text-bg-secondary fs-6 cart-badge bg-danger ms-3">
-                0
+                {bag.length}
               </span>
             </span>
           </div>
