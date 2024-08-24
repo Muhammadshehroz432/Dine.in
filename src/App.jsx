@@ -9,6 +9,7 @@ import Contact from "./Components/Contact/Contact";
 import Booktable from "./Components/Book-table/Booktable";
 import Blog from "./Components/Blogs/Blog";
 import Menu from "./Components/Menu/Menu";
+import Bag from "./Components/Bag/Bag";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/booktable" element={<Booktable />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/bag" element={<Bag />} />
       </Routes>
       <Footer />
     </div>

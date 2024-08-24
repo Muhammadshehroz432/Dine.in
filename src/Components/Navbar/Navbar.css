@@ -87,8 +87,15 @@
 }
 .add-to-cart {
   color: var(--web-color) !important;
+  position: relative;
+  right: -3%;
+  top: -4px;
 }
-
+.add-cart-badge {
+  position: relative;
+  top: -2px;
+  right: -5%;
+}
 /* for Mobile screen */
 @media only screen and (min-width: 300px) and (max-width: 600px) {
   /* navbar */
@@ -116,6 +123,11 @@
   .cart-badge {
     position: relative;
     left: -11%;
+  }
+  .add-to-cart {
+    position: relative;
+    right: -13%;
+    top: -1px;
   }
 }
 /* Tablets screen */
@@ -151,6 +163,12 @@
   .cart-badge {
     position: relative;
     left: -6%;
+  }
+
+  .add-to-cart {
+    position: relative;
+    right: -30%;
+    top: -1px;
   }
 }
 .book-table a {

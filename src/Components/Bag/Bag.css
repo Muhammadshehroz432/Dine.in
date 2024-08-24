@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "logofont";
+  src: url(Cinzel-Bold.ttf) format("truetype");
+}
+
+:root {
+  --web-color: #c8a97e;
+}
+.bagitem-img {
+  width: 22%;
+}
+.checkout-btn {
+  background-color: var(--web-color) !important;
+  border: none !important;
+  transition: all ease-in-out 0.2s;
+}
+
+.checkout-btn:hover {
+  background-color: transparent !important;
+  color: var(--web-color) !important;
+  border: 2px solid var(--web-color) !important;
+}

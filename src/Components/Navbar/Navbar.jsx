@@ -4,13 +4,14 @@ import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 const Navbar = () => {
   const [Sticky, setSticky] = useState(false);
 
   window.addEventListener("scroll", () => {
     window.scrollY > 10 ? setSticky(true) : setSticky(false);
   });
-
+  const bag = useSelector((store) => store.bag);
   return (
     <div>
       <nav
@@ -20,6 +21,17 @@ const Navbar = () => {
       >
         <div className="container">
           <a className="navbar-brand fs-2">DINE.IN</a>
+
+          {/* Add to Cart for mobile/tablet - appears before the toggle menu */}
+          <div className="add-to-cart d-lg-none order-1 ">
+            <span className="fs-2 position-relative">
+              <FaShoppingCart />
+              <span className="badge text-bg-secondary fs-6 cart-badge bg-danger ms-3">
+                0
+              </span>
+            </span>
+          </div>
+
           <button
             className="navbar-toggler order-2"
             type="button"
@@ -35,7 +47,7 @@ const Navbar = () => {
           </button>
 
           <div
-            className="collapse navbar-collapse order-lg-1 order-3"
+            className="collapse navbar-collapse order-lg-1 order-4"
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
@@ -49,7 +61,7 @@ const Navbar = () => {
                   to="/about"
                   className={`nav-link  ${(e) => {
                     return e.isActive ? "active " : "";
-                  }} `}
+                  }}`}
                 >
                   About
                 </NavLink>
@@ -59,7 +71,7 @@ const Navbar = () => {
                   to="/catering"
                   className={` nav-link ${(e) => {
                     return e.isActive ? "active " : "";
-                  }} `}
+                  }}`}
                 >
                   Services
                 </NavLink>
@@ -69,7 +81,7 @@ const Navbar = () => {
                   to="/menu"
                   className={` nav-link ${(e) => {
                     return e.isActive ? "active " : "";
-                  }} `}
+                  }}`}
                 >
                   Menu
                 </NavLink>
@@ -79,7 +91,7 @@ const Navbar = () => {
                   to="/testimonial"
                   className={`nav-link ${(e) => {
                     return e.isActive ? "active " : "";
-                  }} `}
+                  }}`}
                 >
                   Reviews
                 </NavLink>
@@ -89,7 +101,7 @@ const Navbar = () => {
                   to="/blog"
                   className={`nav-link ${(e) => {
                     return e.isActive ? "active " : "";
-                  }} `}
+                  }}`}
                 >
                   Stories
                 </NavLink>
@@ -99,7 +111,7 @@ const Navbar = () => {
                   to="/contact"
                   className={`nav-link ${(e) => {
                     return e.isActive ? "active " : "";
-                  }} `}
+                  }}`}
                 >
                   Contact
                 </NavLink>
@@ -107,6 +119,21 @@ const Navbar = () => {
               <NavLink to="/booktable">
                 <button className="book-btn">Book a table</button>
               </NavLink>
+
+              {/* Add to Cart for desktop/laptop - appears after the "Book a Table" button */}
+              <div className="add-to-cart d-none d-lg-block ms-3">
+                <span className="fs-2 position-relative">
+                  <NavLink to="/bag">
+                    <span className="cart" style={{ color: "#c8a97e" }}>
+                      <FaShoppingCart />
+                    </span>
+                  </NavLink>
+
+                  <span className="badge text-bg-secondary fs-6 cart-badge bg-danger ms-1 add-cart-badge">
+                    {bag.length}
+                  </span>
+                </span>
+              </div>
             </ul>
           </div>
         </div>

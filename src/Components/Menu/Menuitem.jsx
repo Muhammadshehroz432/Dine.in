@@ -1,12 +1,19 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import { useDispatch } from "react-redux";
+import { BagAction } from "../../Store/bag";
 const Menuitem = ({ menuitems, activeMenu }) => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   });
+  const Dispatch = useDispatch();
+  const Handleadditem = () => {
+    Dispatch(BagAction.addBag(menuitems.id));
+  };
   console.log("the item clicked is ", activeMenu);
   return (
     <div>
@@ -36,7 +43,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[0].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -51,7 +60,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[1].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -68,7 +79,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[2].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -83,7 +96,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[3].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -100,7 +115,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[4].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -115,7 +132,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[5].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -145,7 +164,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[6].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -160,7 +181,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[7].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -177,7 +200,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[8].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -192,7 +217,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[9].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -209,7 +236,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[10].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -224,7 +253,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[11].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -253,7 +284,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[12].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -268,7 +301,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[13].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -285,7 +320,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[14].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -300,7 +337,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[15].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -317,7 +356,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[16].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -332,7 +373,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[17].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -360,7 +403,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[18].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -375,7 +420,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[19].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -392,7 +439,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[20].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -407,7 +456,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[21].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -424,7 +475,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[22].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -439,7 +492,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[23].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -467,7 +522,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[24].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -482,7 +539,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[25].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -499,7 +558,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[26].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -514,7 +575,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[27].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -531,7 +594,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[28].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
               <div className="col-lg-6 menu-1-1 d-flex p-2">
@@ -546,7 +611,9 @@ const Menuitem = ({ menuitems, activeMenu }) => {
                   <h3 className="Price me-4 mt-3 fw-bold">
                     RS {menuitems[29].price}
                   </h3>
-                  <button className="menu-btn fs-5">Order Now</button>
+                  <button className="menu-btn fs-5" onClick={Handleadditem}>
+                    Order Now
+                  </button>
                 </div>
               </div>
             </div>
