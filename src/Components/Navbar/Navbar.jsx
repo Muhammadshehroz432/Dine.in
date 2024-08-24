@@ -25,7 +25,11 @@ const Navbar = () => {
           {/* Add to Cart for mobile/tablet - appears before the toggle menu */}
           <div className="add-to-cart d-lg-none order-1 ">
             <span className="fs-2 position-relative">
-              <FaShoppingCart />
+              <NavLink to="/bag">
+                <span className="cart" style={{ color: "#c8a97e" }}>
+                  <FaShoppingCart />
+                </span>
+              </NavLink>
               <span className="badge text-bg-secondary fs-6 cart-badge bg-danger ms-3">
                 {bag.length}
               </span>
