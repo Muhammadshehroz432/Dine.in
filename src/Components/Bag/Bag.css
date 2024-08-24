@@ -8,6 +8,7 @@
 }
 .bagitem-img {
   width: 22%;
+  object-fit: cover;
 }
 .checkout-btn {
   background-color: var(--web-color) !important;
