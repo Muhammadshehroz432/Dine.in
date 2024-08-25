@@ -1,5 +1,5 @@
 import React from "react";
-import Bagitem from "../Bag/Bagitem";
+import Bagitem from "./Bagitem";
 import Bagsummary from "./Bagsummary";
 import { useSelector } from "react-redux";
 import "./Bag.css";
