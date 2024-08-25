@@ -1,26 +1,23 @@
 import React, { useState } from "react";
 import "./Menu.css";
-import Menuitem from "./Menuitem";
 import { useSelector } from "react-redux";
+import Menuitem from "./Menuitem";
 
 const Menu = () => {
   const MenuItems = useSelector((store) => store.menuitem);
+  const newMenuitems = MenuItems[0];
+
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const categories = [
-    "All",
-    "Breakfast",
-    "Lunch",
-    "Dinner",
-    "Deserts",
-    "Drinks",
-  ];
+  const categories = ["All", "Breakfast", "Lunch", "Dinner", "Deserts"];
+
   const handleClick = (category) => {
     setActiveCategory(category);
   };
+
   return (
-    <div className="menu container-fluid overflow-hidden mt-4 ">
-      {/* menu heading */}
+    <div className="menu container-fluid overflow-hidden mt-4">
+      {/* Menu heading */}
       <div
         className="special-heading text-center mt-5"
         data-aos="fade-up"
@@ -31,7 +28,8 @@ const Menu = () => {
           Specialities of <span className="fw-light text-dark">Dine.in</span>
         </h1>
       </div>
-      {/* menu-categories */}
+
+      {/* Menu categories */}
       <div
         className="menu-categories-wrapper container p-4"
         data-aos="fade-up"
@@ -52,15 +50,8 @@ const Menu = () => {
           ))}
         </div>
       </div>
-      {MenuItems.map((item) => {
-        return (
-          <Menuitem
-            key={item.id}
-            menuitems={item}
-            activeMenu={activeCategory}
-          ></Menuitem>
-        );
-      })}
+
+      <Menuitem menuitems={newMenuitems} activeMenu={activeCategory} />
     </div>
   );
 };

@@ -23,11 +23,11 @@
   color: white;
 }
 
-.menu-img {
-  width: 43%;
+.menuitem-img {
+  width: 25%;
   object-fit: cover;
 }
-.menu-btn {
+.menu-item-btn {
   background-color: var(--web-color);
   width: 60%;
   padding: 5px;
@@ -36,7 +36,7 @@
   border: none;
   transition: all ease-in-out 0.3s;
 }
-.menu-btn:hover {
+.menu-item-btn:hover {
   background-color: transparent;
   color: var(--web-color);
   border: 2px solid var(--web-color);
@@ -62,7 +62,19 @@
 .hide-menu {
   display: none !important;
 }
-
+.men-wrapper {
+  display: flex;
+}
+.menu-item-row-1 {
+  display: flex !important;
+}
+.menu-heading {
+  font-family: "logofont";
+  color: var(--web-color);
+}
+.hide-menu {
+  display: none !important;
+}
 /* for Mobile screen */
 @media only screen and (min-width: 300px) and (max-width: 600px) {
   .menu-categories p:hover {

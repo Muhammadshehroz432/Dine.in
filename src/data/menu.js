@@ -1,6 +1,7 @@
 export const MenuItems = [
   // breakfast
   {
+    Dish: "Breakfast",
     id: "001",
     image: "/Breakfast-1.jpg",
     name: "Desi Delight",
@@ -13,6 +14,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Breakfast",
     id: "002",
     image: "/Breakfast-2.jpg",
     name: "Omelette Supreme",
@@ -25,6 +27,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Breakfast",
     id: "003",
     image: "/Breakfast-3.jpg",
     name: "Chana Puri Bliss",
@@ -37,6 +40,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Breakfast",
     id: "004",
     image: "/Breakfast-4.jpg",
     name: "English Morning",
@@ -49,6 +53,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Breakfast",
     id: "005",
     image: "/Breakfast-5.jpg",
     name: "Halwa Puri Feast",
@@ -61,6 +66,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Breakfast",
     id: "006",
     image: "/Breakfast-6.jpg",
     name: "Nutty Pancake Stack",
@@ -74,6 +80,7 @@ export const MenuItems = [
   },
   // lunch
   {
+    Dish: "Lunch",
     id: "007",
     image: "/Lunch-1.jpg",
     name: "Sufi Haleem Delight",
@@ -86,6 +93,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Lunch",
     id: "008",
     image: "/lunch-2.jpg",
     name: "Mughal Aloo Gosht",
@@ -98,6 +106,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Lunch",
     id: "009",
     image: "/lunch-3.jpg",
     name: "Daal Makhani Royale",
@@ -110,6 +119,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Lunch",
     id: "010",
     image: "/lunch-4.jpg",
     name: "Kofta Shahi Masala",
@@ -122,6 +132,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Lunch",
     id: "011",
     image: "/lunch-5.jpg",
     name: "Bun Kebab Fiesta",
@@ -134,6 +145,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Lunch",
     id: "012",
     image: "/Lunch-6.jpeg",
     name: "Chaat Masala Symphony",
@@ -147,6 +159,8 @@ export const MenuItems = [
   },
   // Dinner
   {
+    Dish: "Dinner",
+    Dish: "Dinner",
     id: "013",
     image: "/Dinner-1.jpg",
     name: "Zafrani Biryani",
@@ -159,6 +173,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Dinner",
     id: "014",
     image: "/Dinner-2.jpg",
     name: "Nihari-e-Khas",
@@ -171,6 +186,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Dinner",
     id: "015",
     image: "/Dinner-3.jpeg",
     name: "Mutton Karahi",
@@ -183,6 +199,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Dinner",
     id: "016",
     image: "/Dinner-4.jpg",
     name: "Kofta Biryani",
@@ -195,6 +212,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Dinner",
     id: "017",
     image: "/Dinner-5.jpg",
     name: "Stuffed Chicken Roulade",
@@ -207,6 +225,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Dinner",
     id: "018",
     image: "/Dinner-6.jpg",
     name: "Seafood Pulao",
@@ -221,6 +240,7 @@ export const MenuItems = [
 
   // Desert
   {
+    Dish: "Deserts",
     id: "019",
     image: "/desert-1.jpg",
     name: "Saffron Silk Panna Cotta",
@@ -233,6 +253,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Deserts",
     id: "020",
     image: "/desert-2.jpg",
     name: "Choco-Lavender Mousse Delight",
@@ -245,6 +266,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Deserts",
     id: "021",
     image: "/desert-3.jpg",
     name: "Pistachio Rose Kulfi",
@@ -257,6 +279,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Deserts",
     id: "022",
     image: "/desert-4.jpg",
     name: "Coconut Lychee Sorbet",
@@ -269,6 +292,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Deserts",
     id: "023",
     image: "/desert-5.jpg",
     name: "Cardamom Caramel Flan",
@@ -281,6 +305,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Deserts",
     id: "024",
     image: "/Desert-6.jpg",
     name: "Mango Passion Parfait",
@@ -294,6 +319,7 @@ export const MenuItems = [
   },
   // Drinks
   {
+    Dish: "Drinks",
     id: "025",
     image: "/Drink-1.png",
     name: "Mystic Mint Mojito",
@@ -306,6 +332,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Drinks",
     id: "026",
     image: "/Drink-2.webp",
     name: "Rose Petal Elixir",
@@ -318,6 +345,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Drinks",
     id: "027",
     image: "/Drink-3.png",
     name: "Tropical Sunset Cooler",
@@ -330,6 +358,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Drinks",
     id: "028",
     image: "/Drink-4.png",
     name: "Saffron & Cardamom Chai Latte",
@@ -342,6 +371,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Drinks",
     id: "029",
     image: "/Drink-5.png",
     name: "Lychee Basil Fizz",
@@ -354,6 +384,7 @@ export const MenuItems = [
     },
   },
   {
+    Dish: "Drinks",
     id: "030",
     image: "/Drink-6.png",
     name: "Pomegranate Blossom Spritz",

@@ -109,7 +109,7 @@ const Footer = () => {
               />
               <button
                 type="button"
-                class="btn btn-primary footer-subscribe-btn "
+                className="btn btn-primary footer-subscribe-btn "
               >
                 Subscribe
               </button>
