@@ -3,12 +3,14 @@ import Bagitem from "../Bag/Bagitem";
 import Bagsummary from "./Bagsummary";
 import { useSelector } from "react-redux";
 import "./Bag.css";
+
 const Bag = () => {
   const bag = useSelector((state) => state.bag);
 
   console.log(bag);
+
   return (
-    <div className=".container  p-5 ">
+    <div className="container p-5">
       <h1 className="text-center bag-heading mt-5 display-1 fw-bold">
         Add to Cart
       </h1>

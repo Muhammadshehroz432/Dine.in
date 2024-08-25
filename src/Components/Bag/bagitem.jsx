@@ -5,12 +5,13 @@ import { useDispatch } from "react-redux";
 import { BagAction } from "../../Store/bag";
 
 const Bagitem = ({ item }) => {
-  console.log(item);
   const dispatch = useDispatch();
+
   const Removeitembag = () => {
     dispatch(BagAction.removeBag(item.id));
   };
 
+  // Check if item is not defined, render a message
   if (!item) {
     return <div>Item not found</div>;
   }
@@ -22,7 +23,7 @@ const Bagitem = ({ item }) => {
         style={{ maxWidth: "540px" }}
       >
         <div className="row g-0">
-          <span className="remove-cart fs-3 " onClick={Removeitembag}>
+          <span className="remove-cart fs-3" onClick={Removeitembag}>
             <RiDeleteBin5Fill />
           </span>
           <div className="col-md-4">
@@ -36,7 +37,7 @@ const Bagitem = ({ item }) => {
             <div className="card-body">
               <h5 className="card-title">{item.name}</h5>
               <p className="card-text">{item.description}</p>
-              <p className="card-text fs-3 fw-bold">Rs{item.price}</p>
+              <p className="card-text fs-3 fw-bold">Rs {item.price}</p>
             </div>
           </div>
         </div>

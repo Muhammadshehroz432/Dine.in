@@ -9,16 +9,19 @@ const Bagsummary = () => {
 
   // Calculate the total price
   const totalPrice = bag.reduce((accumulator, item) => {
-    // Assuming each item in the bag has a price property
-    return accumulator + item.price;
+    // Ensure item has a price, default to 0 if not defined
+    return accumulator + (item.price || 0);
   }, 0);
+
+  // Format total price to 2 decimal places
+  const formattedTotalPrice = totalPrice.toFixed(2);
 
   return (
     <div>
       <div className="card mb-3 mt-5" style={{ width: "18rem" }}>
         <div className="card-body">
           <p className="card-title">Total items: {bagQuantity}</p>
-          <h2 className="card-text">Total Price: Rs {totalPrice}</h2>
+          <h2 className="card-text">Total Price: Rs {formattedTotalPrice}</h2>
           <a href="#" className="btn btn-primary checkout-btn">
             Proceed to Checkout
           </a>
