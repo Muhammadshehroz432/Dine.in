@@ -4,12 +4,14 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useDispatch } from "react-redux";
 import { BagAction } from "../../Store/bag";
+
 const Menuitem = ({ menuitems, activeMenu }) => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   }, []);
+
   console.log(`The active menu is: ${activeMenu}`);
 
   const filteredMenuItems =
@@ -18,9 +20,12 @@ const Menuitem = ({ menuitems, activeMenu }) => {
       : menuitems.filter((item) => item.Dish === activeMenu);
 
   const dispatch = useDispatch();
-  const handleAddToCart = () => {
-    dispatch(BagAction.addBag(menuitems.id));
+
+  // Function to handle adding an item to the cart
+  const handleAddToCart = (item) => {
+    dispatch(BagAction.Addtobag(item)); // Pass the entire item
   };
+
   return (
     <div className={`menu-item container`}>
       <div className="row menu-item-row-1 d-flex">
@@ -47,7 +52,7 @@ const Menuitem = ({ menuitems, activeMenu }) => {
               <p className="menu-item-price fs-3 fw-bold">Rs {item.price}</p>
               <button
                 className="menu-item-btn p-2 fs-5"
-                onClick={handleAddToCart}
+                onClick={() => handleAddToCart(item)} // Pass the current item
               >
                 Order Now
               </button>

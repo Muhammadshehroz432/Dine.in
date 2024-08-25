@@ -10,7 +10,6 @@ import Booktable from "./Components/Book-table/Booktable";
 import Blog from "./Components/Blogs/Blog";
 import Menu from "./Components/Menu/Menu";
 import Bag from "./Components/Bag/Bag";
-
 const App = () => {
   return (
     <div>
