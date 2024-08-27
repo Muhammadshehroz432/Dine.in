@@ -1,17 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
-
 import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
+
 const Navbar = () => {
   const [Sticky, setSticky] = useState(false);
+  const navbarCollapseRef = useRef(null);
 
-  window.addEventListener("scroll", () => {
-    window.scrollY > 10 ? setSticky(true) : setSticky(false);
-  });
   const bag = useSelector((store) => store.bag);
+
+  // Close navbar when a link is clicked
+  const handleNavLinkClick = () => {
+    if (navbarCollapseRef.current.classList.contains("show")) {
+      navbarCollapseRef.current.classList.remove("show");
+    }
+  };
+
+  // Attach event listener to scroll to toggle sticky navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      window.scrollY > 10 ? setSticky(true) : setSticky(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       <nav
@@ -53,19 +71,23 @@ const Navbar = () => {
           <div
             className="collapse navbar-collapse order-lg-1 order-4"
             id="navbarSupportedContent"
+            ref={navbarCollapseRef}
           >
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
               <li className="nav-item">
-                <NavLink to="/" className={`nav-link`}>
+                <NavLink
+                  to="/"
+                  className="nav-link"
+                  onClick={handleNavLinkClick}
+                >
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink
                   to="/about"
-                  className={`nav-link  ${(e) => {
-                    return e.isActive ? "active " : "";
-                  }}`}
+                  className="nav-link"
+                  onClick={handleNavLinkClick}
                 >
                   About
                 </NavLink>
@@ -73,9 +95,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   to="/catering"
-                  className={` nav-link ${(e) => {
-                    return e.isActive ? "active " : "";
-                  }}`}
+                  className="nav-link"
+                  onClick={handleNavLinkClick}
                 >
                   Services
                 </NavLink>
@@ -83,9 +104,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   to="/menu"
-                  className={` nav-link ${(e) => {
-                    return e.isActive ? "active " : "";
-                  }}`}
+                  className="nav-link"
+                  onClick={handleNavLinkClick}
                 >
                   Menu
                 </NavLink>
@@ -93,9 +113,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   to="/testimonial"
-                  className={`nav-link ${(e) => {
-                    return e.isActive ? "active " : "";
-                  }}`}
+                  className="nav-link"
+                  onClick={handleNavLinkClick}
                 >
                   Reviews
                 </NavLink>
@@ -103,9 +122,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   to="/blog"
-                  className={`nav-link ${(e) => {
-                    return e.isActive ? "active " : "";
-                  }}`}
+                  className="nav-link"
+                  onClick={handleNavLinkClick}
                 >
                   Stories
                 </NavLink>
@@ -113,9 +131,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <NavLink
                   to="/contact"
-                  className={`nav-link ${(e) => {
-                    return e.isActive ? "active " : "";
-                  }}`}
+                  className="nav-link"
+                  onClick={handleNavLinkClick}
                 >
                   Contact
                 </NavLink>
@@ -132,7 +149,6 @@ const Navbar = () => {
                       <FaShoppingCart />
                     </span>
                   </NavLink>
-
                   <span className="badge text-bg-secondary fs-6 cart-badge bg-danger ms-1 add-cart-badge">
                     {bag.length}
                   </span>
